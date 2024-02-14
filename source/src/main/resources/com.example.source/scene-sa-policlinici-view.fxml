@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.source.controller.Admin.ScenePoliclinici">
+    <tabs>
+        <Tab text="POLICLINICI">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="617.0" style="-fx-background-color: #660000;">
+                    <children>
+                        <Button layoutX="541.0" layoutY="116.0" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" text="INAPOI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                        <TableView fx:id="tabelPoliclinici" editable="true" layoutX="25.0" layoutY="37.0" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #330000;">
+                            <columns>
+                                <TableColumn fx:id="id" prefWidth="63.99999809265137" text="ID" />
+                                <TableColumn fx:id="id_program_functionare" onEditCommit="#id_program_functionareEdit" prefWidth="74.39997100830078" text="PROGRAM" />
+                                <TableColumn fx:id="adresa" onEditCommit="#adresaEdit" prefWidth="99.20001220703125" text="ADRESA" />
+                                <TableColumn fx:id="denumire" onEditCommit="#denumireEdit" prefWidth="158.0" text="DENUMIRE" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="tabelProgram" editable="true" layoutX="25.0" layoutY="322.0" prefHeight="200.0" prefWidth="950.0" style="-fx-background-color: #330000;">
+                            <columns>
+                                <TableColumn fx:id="idP" prefWidth="40.0" text="ID" />
+                                <TableColumn fx:id="duminica" onEditCommit="#duminicaEdit" prefWidth="130.0" text="DUMINCA" />
+                                <TableColumn fx:id="luni" onEditCommit="#luniEdit" prefWidth="130.0" text="LUNI" />
+                                <TableColumn fx:id="marti" onEditCommit="#martiEdit" prefWidth="130.0" text="MARTI" />
+                                <TableColumn fx:id="miercuri" onEditCommit="#miercuriEdit" prefWidth="130.0" text="MIERCURI" />
+                                <TableColumn fx:id="joi" onEditCommit="#joiEdit" prefWidth="130.0" text="JOI" />
+                                <TableColumn fx:id="vineri" onEditCommit="#vineriEdit" prefWidth="130.0" text="VINERI" />
+                                <TableColumn fx:id="sambata" onEditCommit="#sambataEdit" prefWidth="130.0" text="SAMBATA" />
+                            </columns>
+                        </TableView>
+                  <Button layoutX="541.0" layoutY="54.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" text="ACTUALIZEAZA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+      <Tab text="ORAR NOU">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="617.0" style="-fx-background-color: #660000;">
+               <children>
+                  <Button layoutX="543.0" layoutY="40.0" mnemonicParsing="false" onAction="#adaugaProgramFunctionare" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" text="INSEREAZA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="66.0" layoutY="40.0" prefHeight="500.0" prefWidth="420.0" style="-fx-background-color: #330000;">
+                     <children>
+                        <TextField fx:id="duminicaTf" layoutX="150.0" layoutY="30.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="30.0" prefWidth="110.0" text="DUMINICA" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="luniTf" layoutX="150.0" layoutY="80.0" prefHeight="30.0" prefWidth="200.0" />
+                        <TextField fx:id="martiTf" layoutX="150.0" layoutY="130.0" prefHeight="30.0" prefWidth="200.0" />
+                        <TextField fx:id="miercuriTf" layoutX="150.0" layoutY="180.0" prefHeight="30.0" prefWidth="200.0" />
+                        <TextField fx:id="joiTf" layoutX="150.0" layoutY="230.0" prefHeight="30.0" prefWidth="200.0" />
+                        <TextField fx:id="vineriTf" layoutX="150.0" layoutY="280.0" prefHeight="30.0" prefWidth="200.0" />
+                        <TextField fx:id="sambataTf" layoutX="150.0" layoutY="330.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="80.0" prefHeight="30.0" prefWidth="110.0" text="LUNI" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="130.0" prefHeight="30.0" prefWidth="110.0" text="MARTI" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="180.0" prefHeight="30.0" prefWidth="110.0" text="MIERCURI" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="230.0" prefHeight="30.0" prefWidth="110.0" text="JOI" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="280.0" prefHeight="30.0" prefWidth="110.0" text="VINERI" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="330.0" prefHeight="30.0" prefWidth="110.0" text="SAMBATA" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="173.0" layoutY="385.0" text="ORAR: HH:MM:SS-HH:MM:SS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="POLICLINICA NOUA">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="617.0" style="-fx-background-color: #660000;">
+               <children>
+                  <AnchorPane layoutX="66.0" layoutY="40.0" prefHeight="500.0" prefWidth="420.0" style="-fx-background-color: #330000;">
+                     <children>
+                        <TextField fx:id="idProgramPoliclinica" layoutX="150.0" layoutY="30.0" prefHeight="30.0" prefWidth="200.0" />
+                        <TextField fx:id="adresaPoliclinica" layoutX="150.0" layoutY="90.0" prefHeight="30.0" prefWidth="200.0" />
+                        <TextField fx:id="denumirePoliclinica" layoutX="150.0" layoutY="150.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label alignment="CENTER" layoutX="20.0" layoutY="30.0" prefHeight="30.0" prefWidth="110.0" text="ID PROGRAM" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="20.0" layoutY="90.0" prefHeight="30.0" prefWidth="110.0" text="ADRESA" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="20.0" layoutY="150.0" prefHeight="30.0" prefWidth="110.0" text="DENUMIRE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="550.0" layoutY="40.0" mnemonicParsing="false" onAction="#adaugaPoliclinica" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" text="INSEREAZA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>

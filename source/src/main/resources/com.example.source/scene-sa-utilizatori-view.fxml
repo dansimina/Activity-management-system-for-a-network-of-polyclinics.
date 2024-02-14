@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.source.controller.Admin.SceneUtilizatori">
+    <tabs>
+        <Tab fx:id="add" onSelectionChanged="#reset" text="ADAUGA UTILIZATOR">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #660000;">
+                    <children>
+                        <Button layoutX="549.0" layoutY="429.0" mnemonicParsing="false" onAction="#adaugaUtilizator" prefHeight="40.0" prefWidth="380.0" style="-fx-background-color: #ffffff;" text="ADAUGA UTILIZATOR">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="67.0" layoutY="27.0" prefHeight="530.0" prefWidth="420.0" style="-fx-background-color: #330000;">
+                     <children>
+                              <ChoiceBox fx:id="departamentChoiceBox" layoutX="167.0" layoutY="19.0" prefHeight="32.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="30.0" prefWidth="110.0" text="DEPARTAMENT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="adresaTf" layoutX="167.0" layoutY="70.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="70.0" prefHeight="30.0" prefWidth="110.0" text="ADRESA" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="cnpTf" layoutX="167.0" layoutY="120.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="120.0" prefHeight="30.0" prefWidth="110.0" text="CNP" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="numeTf" layoutX="167.0" layoutY="170.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="170.0" prefHeight="30.0" prefWidth="110.0" text="NUME" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="prenumeTf" layoutX="167.0" layoutY="220.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="220.0" prefHeight="30.0" prefWidth="110.0" text="PRENUME" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="telefonTf" layoutX="167.0" layoutY="270.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="270.0" prefHeight="30.0" prefWidth="110.0" text="TELEFON" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="emailTf" layoutX="167.0" layoutY="320.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="320.0" prefHeight="30.0" prefWidth="110.0" text="EMAIL" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="ibanTf" layoutX="167.0" layoutY="370.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="370.0" prefHeight="30.0" prefWidth="110.0" text="IBAN" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <DatePicker fx:id="data_angajariiDP" layoutX="167.0" layoutY="419.0" prefHeight="32.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="419.0" prefHeight="30.0" prefWidth="110.0" text="DATA ANGAJARII" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                              <ChoiceBox fx:id="rolChoiceBox" layoutX="167.0" layoutY="469.0" prefHeight="32.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="20.0" layoutY="470.0" prefHeight="30.0" prefWidth="110.0" text="ROL" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="524.0" layoutY="27.0" prefHeight="370.0" prefWidth="430.0" style="-fx-background-color: #330000;">
+                     <children>
+                              <TextField fx:id="parolaTf" layoutX="183.0" layoutY="128.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="usernameTf" layoutX="183.0" layoutY="67.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" layoutX="32.0" layoutY="62.0" prefHeight="40.0" prefWidth="130.0" text="NUME UTILIZATOR" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                              <Label alignment="CENTER" layoutX="32.0" layoutY="123.0" prefHeight="40.0" prefWidth="130.0" text="PAROLA" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="549.0" layoutY="493.0" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="380.0" style="-fx-background-color: #ffffff;" text="INAPOI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="CONTURI">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #660000;">
+                    <children>
+                        <TableView fx:id="tabelConturi" editable="true" layoutX="67.0" layoutY="27.0" prefHeight="530.0" prefWidth="420.0" style="-fx-background-color: #330000;">
+                            <columns>
+                                <TableColumn fx:id="idC" prefWidth="63.33331298828125" text="ID" />
+                                <TableColumn fx:id="nume_utilizator" onEditCommit="#nume_utilizatorEdit" prefWidth="170.6666717529297" text="NUME UTILIZATOR" />
+                                <TableColumn fx:id="parola" onEditCommit="#parolaEdit" prefWidth="182.66668701171875" text="PAROLA" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="549.0" layoutY="369.0" mnemonicParsing="false" onAction="#adaugaCont" prefHeight="40.0" prefWidth="380.0" style="-fx-background-color: #ffffff;" text="ADAUGA CONT">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                        <Button layoutX="549.0" layoutY="478.0" mnemonicParsing="false" onAction="#stergeCont" prefHeight="40.0" prefWidth="380.0" style="-fx-background-color: #ffffff;" text="STERGE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                        <Button layoutX="549.0" layoutY="423.0" mnemonicParsing="false" onAction="#actualizeazaConturi" prefHeight="40.0" prefWidth="380.0" style="-fx-background-color: #ffffff;" text="MODIFICA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="524.0" layoutY="27.0" prefHeight="322.0" prefWidth="430.0" style="-fx-background-color: #330000;">
+                     <children>
+                              <TextField fx:id="usernameCTf" layoutX="183.0" layoutY="67.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                              <TextField fx:id="passwordTf" layoutX="183.0" layoutY="128.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="62.0" prefHeight="40.0" prefWidth="130.0" text="NUME UTILIZATOR" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="30.0" layoutY="123.0" prefHeight="40.0" prefWidth="130.0" text="PAROLA" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="UTILIZATORI">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #660000;">
+                    <children>
+                        <TableView fx:id="tabelUtilizatori" editable="true" layoutX="25.0" layoutY="37.0" prefHeight="350.0" prefWidth="950.0" style="-fx-background-color: #330000;">
+                            <columns>
+                                <TableColumn fx:id="id" prefWidth="37.333316802978516" text="ID" />
+                                <TableColumn fx:id="id_cont" prefWidth="45.333335876464844" text="CONT" />
+                                <TableColumn fx:id="departament" onEditCommit="#departamentEdit" prefWidth="110.6666488647461" text="DEPARTAMENT" />
+                                <TableColumn fx:id="adresa" onEditCommit="#adresaEdit" prefWidth="140.6667022705078" text="ADRESA" />
+                                <TableColumn fx:id="cnp" onEditCommit="#cnpEdit" prefWidth="104.0" text="CNP" />
+                                <TableColumn fx:id="nume" onEditCommit="#numeEdit" prefWidth="74.0" text="NUME" />
+                                <TableColumn fx:id="prenume" onEditCommit="#prenumeEdit" prefWidth="85.3333740234375" text="PRENUME" />
+                                <TableColumn fx:id="telefon" onEditCommit="#telefonEdit" prefWidth="70.0" text="TELEFON" />
+                                <TableColumn fx:id="email" onEditCommit="#emailEdit" prefWidth="88.0" text="MAIL" />
+                                <TableColumn fx:id="iban" onEditCommit="#ibanEdit" prefWidth="96.66668701171875" text="IBAN" />
+                                <TableColumn fx:id="data_angajarii" onEditCommit="#data_angajariiEdit" prefWidth="111.0" text="DATA ANG" />
+                                <TableColumn fx:id="rol" onEditCommit="#rolEdit" prefWidth="107.0" text="rol" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="50.0" layoutY="430.0" mnemonicParsing="false" onAction="#actualizeazaUtilizatori" prefHeight="40.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" text="UPDATE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" onAction="#stergeUtilizator" prefHeight="40.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" text="STERGE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+      <Tab text="ANGAJATI">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #660000;">
+               <children>
+                  <TableView fx:id="tabelAngajati" editable="true" layoutX="25.0" layoutY="37.0" prefHeight="350.0" prefWidth="950.0" style="-fx-background-color: #330000;">
+                     <columns>
+                        <TableColumn fx:id="id_angajat" prefWidth="48.0" text="ID" />
+                        <TableColumn fx:id="nume_angajat" prefWidth="107.33333969116211" text="NUME" />
+                        <TableColumn fx:id="prenume_angajat" prefWidth="150.66664123535156" text="PRENUME" />
+                        <TableColumn fx:id="functie" onEditCommit="#functieEdit" prefWidth="132.66668701171875" text="FUNCTIE" />
+                        <TableColumn fx:id="salariu_negociat" onEditCommit="#salarEdit" prefWidth="148.00006103515625" text="SALARIU NEGOCIAT" />
+                        <TableColumn fx:id="numar_ore" onEditCommit="#oreEdit" prefWidth="145.33331298828125" text="NUMAR ORE" />
+                        <TableColumn fx:id="id_policlinica" onEditCommit="#policlinicaEdit" prefWidth="109.33331298828125" text="POLICLINICA" />
+                        <TableColumn fx:id="id_utilizator" prefWidth="104.66668701171875" text="UTILIZATOR" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="50.0" layoutY="430.0" mnemonicParsing="false" onAction="#updateAngajati" prefHeight="40.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" text="MODIFICA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button layoutX="326.0" layoutY="496.0" mnemonicParsing="false" onAction="#addAngajat" prefHeight="40.0" prefWidth="623.0" style="-fx-background-color: #ffffff;" text="ADAUGA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <TextField fx:id="id_utilizator_add" layoutX="214.0" layoutY="496.0" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" />
+                  <Label alignment="CENTER" layoutX="50.0" layoutY="496.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="ID UTILIZATOR">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="223.0" layoutY="387.0" text="FUNCTIE: medic / asistent_medical / receptioner / economic / resurse_umane" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="MEDICI">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #660000;">
+               <children>
+                  <TableView fx:id="tabelMedici" editable="true" layoutX="25.0" layoutY="37.0" prefHeight="250.0" prefWidth="950.0" style="-fx-background-color: #330000;">
+                     <columns>
+                        <TableColumn fx:id="id_medic" prefWidth="48.0" text="ID" />
+                        <TableColumn fx:id="id_angajat_medic" onEditCommit="#idAngajatMedicEdit" prefWidth="150.66664123535156" text="ANGAJAT" />
+                        <TableColumn fx:id="cod_parafa" onEditCommit="#codParafaEdit" prefWidth="171.99993896484375" text="PARAFA" />
+                        <TableColumn fx:id="titlu_stiintific" onEditCommit="#titluStiintificEdit" prefWidth="258.0" text="TITLU STIINTIFIC" />
+                        <TableColumn fx:id="post_didactic" onEditCommit="#postDidacticEdit" prefWidth="173.33331298828125" text="POST DIDACTIC" />
+                        <TableColumn fx:id="venit_aditional" onEditCommit="#venitEdit" prefWidth="142.6666259765625" text="VENIT ADITIONAL" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="705.0" layoutY="330.0" mnemonicParsing="false" onAction="#updateMedic" prefHeight="40.0" prefWidth="270.0" style="-fx-background-color: #ffffff;" text="UPDATE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button layoutX="705.0" layoutY="430.0" mnemonicParsing="false" onAction="#addMedic" prefHeight="40.0" prefWidth="270.0" style="-fx-background-color: #ffffff;" text="ADAUGA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <TextField fx:id="id_angajat_medic_in" layoutX="879.0" layoutY="380.0" prefHeight="40.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" />
+                  <Label alignment="CENTER" layoutX="705.0" layoutY="380.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="ID ANGAJAT">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <TableView fx:id="tabelPolicliniciCompatibile" layoutX="25.0" layoutY="330.0" prefHeight="200.0" prefWidth="640.0" style="-fx-background-color: #330000;">
+                     <columns>
+                        <TableColumn fx:id="idPoliclinicaTabelPoliclinici" prefWidth="41.33334541320801" text="ID" />
+                        <TableColumn fx:id="denumireTabelPoliclinici" prefWidth="152.6666488647461" text="DENUMIRE" />
+                        <TableColumn fx:id="adresaTabelPoliclinici" prefWidth="130.00001525878906" text="ADRESA" />
+                        <TableColumn fx:id="numarServiciiCompatibile" prefWidth="201.33334350585938" text="NUMAR SERVICII COMPATIBILE" />
+                        <TableColumn fx:id="numarMedici" prefWidth="106.66668701171875" text="NUMAR MEDICI" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="705.0" layoutY="480.0" mnemonicParsing="false" onAction="#afiseazaPoliclinici" prefHeight="40.0" prefWidth="270.0" style="-fx-background-color: #ffffff;" text="POLICLINICI COMPATIBILE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="ASISTENTI">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #660000;">
+               <children>
+                  <TableView fx:id="tabelAsistenti" editable="true" layoutX="25.0" layoutY="37.0" prefHeight="350.0" prefWidth="950.0" style="-fx-background-color: #330000;">
+                     <columns>
+                        <TableColumn fx:id="id_asistent" prefWidth="48.0" text="ID" />
+                        <TableColumn fx:id="id_angajat_asistent" onEditCommit="#idAngajatAsistentEdit" prefWidth="150.66664123535156" text="ANGAJAT" />
+                        <TableColumn fx:id="tip" onEditCommit="#tipEdit" prefWidth="351.33338928222656" text="TIP" />
+                        <TableColumn fx:id="grad" onEditCommit="#gradEdit" prefWidth="398.66656494140625" text="GRAD" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="50.0" layoutY="430.0" mnemonicParsing="false" onAction="#updateAsistent" prefHeight="40.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" text="MODIFICA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button layoutX="326.0" layoutY="496.0" mnemonicParsing="false" onAction="#addAsistent" prefHeight="40.0" prefWidth="623.0" style="-fx-background-color: #ffffff;" text="ADAUGA">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <TextField fx:id="id_angajat_asistent_in" layoutX="214.0" layoutY="496.0" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" />
+                  <Label alignment="CENTER" layoutX="50.0" layoutY="496.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="ID ANGAJAT">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>
