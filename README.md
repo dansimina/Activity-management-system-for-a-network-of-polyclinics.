@@ -15,4 +15,13 @@ This repository contains the implementation of a **policlinic management system*
 
 - **Database:** MySQL (relational database for structured medical and financial data storage).  
 - **Backend:** Java (object-oriented programming language for system logic).  
-- **Frontend:** JavaFX (modern GUI framework for desktop applications).  
+- **Frontend:** JavaFX (modern GUI framework for desktop applications).
+- 
+---
+
+# Login page
+![plot](./login.png)
+# Medic view page
+![plot](./user1.png)
+# Human resources view page
+![plot](./user2.png)
